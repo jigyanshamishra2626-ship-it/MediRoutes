@@ -1,0 +1,19 @@
+flowchart TD
+    U[Patients and Hospital Staff]
+    CF[Amazon CloudFront]
+    S3[Amazon S3 - React Frontend]
+    EC2[Amazon EC2 - Express API]
+    DB[(Amazon RDS - PostgreSQL)]
+    VPC[Amazon VPC and Security Groups]
+    IAM[AWS IAM]
+    CW[Amazon CloudWatch]
+
+    U --> CF
+    CF --> S3
+    U --> EC2
+    EC2 --> DB
+    VPC -. Network protection .-> EC2
+    VPC -. Private access .-> DB
+    IAM -. Access control .-> S3
+    IAM -. Access control .-> EC2
+    EC2 --> CW

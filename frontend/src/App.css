@@ -1,0 +1,2383 @@
+/* ========================================
+   MEDIROUTES - PROFESSIONAL THEME
+   Dark Bold Text | Navy | Teal | White
+======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800;900&display=swap');
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #101c3a;
+  background: #f5f7fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f5f7fc;
+  color: #101c3a;
+  font-weight: 600;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 5%;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 1px solid #dfe7f3;
+  box-shadow: 0 4px 18px rgba(16, 28, 58, 0.08);
+}
+
+.navbar h1,
+.navbar h2,
+.navbar strong {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+nav a,
+nav button {
+  padding: 9px 13px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #101c3a;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+nav a:hover,
+nav button:hover {
+  background: #e0fbf7;
+  color: #087f79;
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 35px;
+  margin: 24px auto;
+  padding: 55px 5%;
+  width: 92%;
+  overflow: hidden;
+  border-radius: 28px;
+  background: linear-gradient(125deg, #e5f8ff, #e5fff7 55%, #eaeaff);
+  border: 1px solid #d6e9f4;
+  box-shadow: 0 14px 35px rgba(16, 28, 58, 0.08);
+}
+
+.hero h1 {
+  margin: 10px 0 18px;
+  color: #101c3a;
+  font-size: clamp(32px, 5vw, 54px);
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.hero h2,
+.hero h3 {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+.hero p {
+  color: #263b55;
+  line-height: 1.8;
+  font-weight: 700;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: #c8faf0;
+  color: #075e58;
+  border: 1px solid #a1eee0;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.hero-card {
+  padding: 26px;
+  border: 1px solid #d8e8f4;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 28px rgba(16, 28, 58, 0.1);
+}
+
+.hero-card h2,
+.hero-card h3 {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+.hero-card p {
+  color: #34465d;
+}
+
+.health-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  margin: 12px 0;
+  border-radius: 12px;
+  background: #e7fbf5;
+  border: 1px solid #b7eee0;
+  color: #075e58;
+  font-weight: 800;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stats > div {
+  padding: 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #dce6f2;
+  box-shadow: 0 5px 16px rgba(16, 28, 58, 0.06);
+}
+
+.stats h2,
+.stats h3,
+.stats strong {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+.stats p {
+  color: #43536a;
+  font-weight: 700;
+}
+
+/* COMMON SECTION STYLING */
+
+section {
+  scroll-margin-top: 95px;
+}
+
+.doctors,
+.hospitals,
+.appointment,
+.hospital-beds,
+.emergency-section {
+  width: 92%;
+  max-width: 1400px;
+  margin: 35px auto;
+  padding: 30px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #e0e7f1;
+  box-shadow: 0 8px 25px rgba(16, 28, 58, 0.06);
+}
+
+.doctors h1,
+.doctors h2,
+.doctors h3,
+.hospitals h1,
+.hospitals h2,
+.hospitals h3,
+.appointment h1,
+.appointment h2,
+.appointment h3,
+.hospital-beds h1,
+.hospital-beds h2,
+.hospital-beds h3,
+.emergency-section h1,
+.emergency-section h2,
+.emergency-section h3 {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+.doctors p,
+.hospitals p,
+.appointment p,
+.hospital-beds p {
+  color: #34465d;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+/* DOCTORS */
+
+.doctor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.doctor-card {
+  padding: 23px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f0faff);
+  border: 1px solid #dce8f5;
+  box-shadow: 0 7px 20px rgba(16, 28, 58, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(16, 28, 58, 0.12);
+}
+
+.doctor-card h2,
+.doctor-card h3,
+.doctor-card strong {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+.doctor-card p {
+  color: #43536a;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.doctor-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 66px;
+  height: 66px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #d9f5ff, #d8fff2);
+  color: #087f79;
+  font-size: 30px;
+}
+
+/* HOSPITALS */
+
+.hospital-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.hospital-card {
+  padding: 22px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #ffffff, #f6f5ff);
+  border: 1px solid #e0e2f4;
+  box-shadow: 0 7px 20px rgba(16, 28, 58, 0.07);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hospital-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(16, 28, 58, 0.12);
+}
+
+.hospital-card h2,
+.hospital-card h3,
+.hospital-card strong {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+.hospital-card p {
+  color: #43536a;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+.hospital-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 15px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #e3e6ff, #d9f6ff);
+  color: #354bb8;
+  font-size: 29px;
+}
+
+.verification-note {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fff7df;
+  border: 1px solid #f5df9b;
+  color: #684600;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.hospital-details-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #087f79;
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hospital-details-link:hover {
+  color: #101c3a;
+}
+
+.hospital-search {
+  width: 100%;
+  max-width: 600px;
+  margin: 18px 0;
+  padding: 13px 16px;
+  border: 1px solid #cbd8e8;
+  border-radius: 13px;
+  background: #f9fbff;
+  color: #101c3a;
+  font-weight: 700;
+  outline: none;
+}
+
+.hospital-search:focus {
+  border-color: #20bba9;
+  box-shadow: 0 0 0 4px rgba(54, 214, 195, 0.18);
+}
+
+.no-hospitals {
+  padding: 22px;
+  border-radius: 14px;
+  background: #f3f6fc;
+  color: #34465d;
+  text-align: center;
+  font-weight: 800;
+}
+
+.hospital-details-btn,
+.hospital-directions-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 7px 5px 7px 0;
+  padding: 11px 16px;
+  border: none;
+  border-radius: 11px;
+  background: #101c3a;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.hospital-details-btn:hover,
+.hospital-directions-btn:hover {
+  background: #263e69;
+  box-shadow: 0 6px 16px rgba(16, 28, 58, 0.18);
+}
+
+.hospital-detail-panel {
+  margin-top: 18px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #f1fbff;
+  border: 1px solid #cfe9f4;
+}
+
+.hospital-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.hospital-detail-header h2,
+.hospital-detail-header h3 {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+/* BEDS */
+
+.hospital-beds {
+  background: linear-gradient(145deg, #ffffff, #f0fbf8);
+}
+
+.bed-demo-note {
+  padding: 14px 17px;
+  margin: 15px 0;
+  border-radius: 12px;
+  background: #e4faf3;
+  border: 1px solid #b7eadc;
+  color: #075e58;
+  font-weight: 800;
+  line-height: 1.7;
+}
+
+/* APPOINTMENTS */
+
+.appointment {
+  background: linear-gradient(145deg, #ffffff, #f5f6ff);
+}
+
+.appointment form {
+  display: grid;
+  gap: 15px;
+  max-width: 750px;
+}
+
+.appointment input,
+.appointment select,
+.appointment textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #cbd8e8;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #101c3a;
+  font-weight: 700;
+  outline: none;
+}
+
+.appointment input:focus,
+.appointment select:focus,
+.appointment textarea:focus {
+  border-color: #20bba9;
+  box-shadow: 0 0 0 4px rgba(54, 214, 195, 0.16);
+}
+
+.appointment label {
+  color: #101c3a;
+  font-weight: 800;
+}
+
+/* LOGIN MENU */
+
+.login-menu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.login-menu > button {
+  padding: 11px 17px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #101c3a, #263e69);
+  color: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 5px 14px rgba(16, 28, 58, 0.15);
+}
+
+.login-menu > button:hover {
+  background: #087f79;
+}
+
+.login-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 150;
+  min-width: 230px;
+  padding: 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid #dce5f1;
+  box-shadow: 0 14px 35px rgba(16, 28, 58, 0.16);
+  color: #101c3a;
+}
+
+.login-panel h2,
+.login-panel h3,
+.login-panel strong {
+  color: #101c3a;
+  font-weight: 900;
+}
+
+.login-panel a,
+.login-panel button {
+  display: block;
+  width: 100%;
+  margin: 7px 0;
+  padding: 11px 13px;
+  border: none;
+  border-radius: 10px;
+  background: #effbf8;
+  color: #075e58;
+  text-align: left;
+  font-weight: 900;
+}
+
+.login-panel a:hover,
+.login-panel button:hover {
+  background: #d8f8ef;
+}
+
+/* EMERGENCY - CLEAR RED HIGHLIGHTS */
+
+.emergency-section {
+  background: linear-gradient(145deg, #fffafa, #fff1f2);
+  border: 1px solid #f2cbd0;
+  box-shadow: 0 9px 26px rgba(160, 30, 50, 0.08);
+}
+
+.emergency-section h1,
+.emergency-section h2,
+.emergency-section h3 {
+  color: #8e1727;
+  font-weight: 900;
+}
+
+.emergency-section p {
+  color: #49232a;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.emergency-call-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 7px 7px 7px 0;
+  padding: 13px 19px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #c62838, #9f1729);
+  color: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 6px 16px rgba(198, 40, 56, 0.2);
+}
+
+.emergency-call-btn:hover {
+  background: #8e1727;
+  box-shadow: 0 9px 20px rgba(198, 40, 56, 0.25);
+}
+
+.emergency-location-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 7px 7px 7px 0;
+  padding: 13px 19px;
+  border: none;
+  border-radius: 12px;
+  background: #101c3a;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.emergency-location-btn:hover {
+  background: #263e69;
+}
+
+.emergency-location-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ALL FORMS */
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  border-radius: 11px;
+}
+
+input,
+select,
+textarea {
+  color: #101c3a;
+  font-weight: 700;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #65748a;
+  font-weight: 600;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #20bba9;
+  box-shadow: 0 0 0 3px rgba(54, 214, 195, 0.15);
+}
+
+/* GENERAL BUTTONS */
+
+button {
+  font-weight: 800;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #36d6c3;
+  outline-offset: 3px;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 45px;
+  padding: 30px 5%;
+  background: #101c3a;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+}
+
+footer h2,
+footer h3,
+footer strong {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+footer p,
+footer a {
+  color: #e5edf9;
+  font-weight: 700;
+}
+
+footer a:hover {
+  color: #36d6c3;
+}
+
+/* RESPONSIVE - TABLETS */
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 38px 5%;
+  }
+
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .doctors,
+  .hospitals,
+  .appointment,
+  .hospital-beds,
+  .emergency-section {
+    padding: 24px;
+  }
+
+  .navbar {
+    padding: 14px 4%;
+  }
+
+  nav {
+    gap: 6px;
+  }
+}
+
+/* RESPONSIVE - MOBILE */
+
+@media (max-width: 520px) {
+  .navbar {
+    position: relative;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  nav a,
+  nav button {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .hero {
+    width: 94%;
+    margin: 16px auto;
+    padding: 28px 20px;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-card {
+    padding: 20px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doctors,
+  .hospitals,
+  .appointment,
+  .hospital-beds,
+  .emergency-section {
+    width: 94%;
+    margin: 22px auto;
+    padding: 19px;
+    border-radius: 18px;
+  }
+
+  .doctor-card,
+  .hospital-card {
+    padding: 19px;
+  }
+
+  .hospital-detail-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .login-panel {
+    right: auto;
+    left: 0;
+  }
+
+  .emergency-call-btn,
+  .emergency-location-btn,
+  .hospital-details-btn,
+  .hospital-directions-btn {
+    max-width: 100%;
+    font-size: 13px;
+  }
+}
+
+/* REDUCE ANIMATION FOR USERS WHO PREFER IT */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+/* ==========================================
+   MEDIROUTES - ROYAL BLUE + WHITE THEME
+   Append this block at the END of App.css
+========================================== */
+
+:root {
+  --mr-navy: #183b73;
+  --mr-blue: #356ae6;
+  --mr-blue-dark: #234d9b;
+  --mr-blue-light: #eaf1ff;
+  --mr-white: #ffffff;
+  --mr-page: #f6f8fd;
+  --mr-text: #111827;
+  --mr-muted: #374151;
+  --mr-border: #dce4f0;
+  --mr-red: #c62838;
+  --mr-red-dark: #941b2b;
+}
+
+html,
+body,
+#root {
+  background: var(--mr-page);
+  color: var(--mr-text);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b,
+label {
+  color: var(--mr-text);
+  font-weight: 900;
+}
+
+p,
+span,
+li,
+small {
+  color: inherit;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: var(--mr-white);
+  border-bottom: 1px solid var(--mr-border);
+  box-shadow: 0 4px 18px rgba(24, 59, 115, 0.09);
+}
+
+nav a,
+nav button {
+  color: var(--mr-text);
+  font-weight: 800;
+}
+
+nav a:hover,
+nav button:hover {
+  color: var(--mr-blue);
+  background: var(--mr-blue-light);
+}
+
+/* HERO */
+
+.hero {
+  background: linear-gradient(125deg, #eaf1ff, #ffffff 75%);
+  border: 1px solid var(--mr-border);
+  box-shadow: 0 12px 30px rgba(24, 59, 115, 0.09);
+}
+
+.hero h1,
+.hero h2,
+.hero h3,
+.hero-card h2,
+.hero-card h3 {
+  color: var(--mr-navy);
+  font-weight: 900;
+}
+
+.hero p,
+.hero-card p {
+  color: var(--mr-muted);
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.tag {
+  background: #dce8ff;
+  border: 1px solid #bfd2ff;
+  color: var(--mr-navy);
+  font-weight: 900;
+}
+
+.hero-card,
+.stats > div {
+  background: var(--mr-white);
+  border: 1px solid var(--mr-border);
+  box-shadow: 0 7px 22px rgba(24, 59, 115, 0.08);
+  border-radius: 18px;
+}
+
+.health-status {
+  background: #e8f7ee;
+  border: 1px solid #b9e5c9;
+  color: #14532d;
+  font-weight: 800;
+}
+
+/* MAIN SECTIONS */
+
+.doctors,
+.hospitals,
+.appointment,
+.hospital-beds {
+  background: var(--mr-white);
+  border: 1px solid var(--mr-border);
+  box-shadow: 0 8px 24px rgba(24, 59, 115, 0.06);
+  border-radius: 22px;
+}
+
+.doctors h1,
+.doctors h2,
+.doctors h3,
+.hospitals h1,
+.hospitals h2,
+.hospitals h3,
+.appointment h1,
+.appointment h2,
+.appointment h3,
+.hospital-beds h1,
+.hospital-beds h2,
+.hospital-beds h3 {
+  color: var(--mr-navy);
+  font-weight: 900;
+}
+
+.doctors p,
+.hospitals p,
+.appointment p,
+.hospital-beds p {
+  color: var(--mr-muted);
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+/* DOCTOR AND HOSPITAL CARDS */
+
+.doctor-card,
+.hospital-card {
+  background: var(--mr-white);
+  border: 1px solid var(--mr-border);
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(24, 59, 115, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.doctor-card:hover,
+.hospital-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(24, 59, 115, 0.13);
+}
+
+.doctor-card h2,
+.doctor-card h3,
+.hospital-card h2,
+.hospital-card h3 {
+  color: var(--mr-navy);
+  font-weight: 900;
+}
+
+.doctor-icon,
+.hospital-icon {
+  background: var(--mr-blue-light);
+  color: var(--mr-navy);
+  border-radius: 16px;
+}
+
+/* GENERAL BUTTONS */
+
+button,
+.hospital-details-btn,
+.hospital-directions-btn {
+  font-weight: 800;
+}
+
+.hospital-details-btn,
+.hospital-directions-btn {
+  background: var(--mr-navy);
+  color: var(--mr-white);
+  border: none;
+  border-radius: 10px;
+}
+
+.hospital-details-btn:hover,
+.hospital-directions-btn:hover {
+  background: var(--mr-blue);
+  color: var(--mr-white);
+}
+
+/* LINKS AND SEARCH */
+
+.hospital-details-link {
+  color: var(--mr-blue-dark);
+  font-weight: 900;
+}
+
+.hospital-search,
+input,
+select,
+textarea {
+  color: var(--mr-text);
+  background: var(--mr-white);
+  border-color: #cbd5e1;
+  font-weight: 700;
+}
+
+.hospital-search:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--mr-blue);
+  box-shadow: 0 0 0 3px rgba(53, 106, 230, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280;
+}
+
+/* HOSPITAL DETAILS AND BEDS */
+
+.hospital-detail-panel {
+  background: #f3f7ff;
+  border: 1px solid var(--mr-border);
+  border-radius: 16px;
+}
+
+.bed-demo-note {
+  background: #eaf1ff;
+  border: 1px solid #c9d9ff;
+  color: var(--mr-navy);
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.verification-note {
+  background: #fff7df;
+  border: 1px solid #f0dfaa;
+  color: #684600;
+  font-weight: 800;
+}
+
+/* LOGIN */
+
+.login-panel {
+  background: var(--mr-white);
+  border: 1px solid var(--mr-border);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(24, 59, 115, 0.15);
+}
+
+.login-panel h2,
+.login-panel h3 {
+  color: var(--mr-navy);
+  font-weight: 900;
+}
+
+.login-panel a,
+.login-panel button {
+  color: var(--mr-navy);
+  background: var(--mr-blue-light);
+  font-weight: 800;
+}
+
+.login-panel a:hover,
+.login-panel button:hover {
+  color: var(--mr-white);
+  background: var(--mr-blue);
+}
+
+/* EMERGENCY - RED ONLY */
+
+.emergency-section {
+  background: #fff5f5;
+  border: 1px solid #f1c6cc;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(198, 40, 56, 0.08);
+}
+
+.emergency-section h1,
+.emergency-section h2,
+.emergency-section h3 {
+  color: var(--mr-red-dark);
+  font-weight: 900;
+}
+
+.emergency-section p {
+  color: #49232a;
+  font-weight: 700;
+}
+
+.emergency-call-btn {
+  background: var(--mr-red);
+  color: var(--mr-white);
+  border: none;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.emergency-call-btn:hover {
+  background: var(--mr-red-dark);
+  color: var(--mr-white);
+}
+
+.emergency-location-btn {
+  background: var(--mr-navy);
+  color: var(--mr-white);
+  border: none;
+  border-radius: 10px;
+  font-weight: 900;
+}
+
+.emergency-location-btn:hover {
+  background: var(--mr-blue);
+  color: var(--mr-white);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--mr-navy);
+  color: var(--mr-white);
+  font-weight: 700;
+}
+
+footer h2,
+footer h3,
+footer p,
+footer a,
+footer strong {
+  color: var(--mr-white);
+}
+
+footer a:hover {
+  color: #cbdcff;
+}
+
+/* ACCESSIBILITY AND MOBILE */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--mr-blue);
+  outline-offset: 3px;
+}
+
+@media (max-width: 850px) {
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .doctors,
+  .hospitals,
+  .appointment,
+  .hospital-beds,
+  .emergency-section {
+    border-radius: 16px;
+  }
+}
+/* =========================================
+   MEDIROUTES — PREMIUM DARK PLUM THEME
+   Purple + Emerald + Rose Red
+========================================= */
+
+:root {
+  --mr-bg: #171020;
+  --mr-surface: #241831;
+  --mr-card: #302047;
+  --mr-purple: #9b6dff;
+  --mr-purple-light: #c4a5ff;
+  --mr-green: #173e3b;
+  --mr-green-bright: #67e8cf;
+  --mr-red: #d63858;
+  --mr-red-dark: #481b2b;
+  --mr-text: #ffffff;
+  --mr-muted: #e2d9f0;
+  --mr-border: #49345e;
+}
+
+/* GLOBAL */
+
+html,
+body,
+#root {
+  background: var(--mr-bg);
+  color: var(--mr-text);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6,
+strong, b, label {
+  color: var(--mr-text);
+  font-weight: 900;
+}
+
+p, li {
+  color: var(--mr-muted);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--mr-purple-light);
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #201430;
+  border-bottom: 1px solid var(--mr-border);
+  box-shadow: 0 6px 25px #08050e80;
+}
+
+nav a,
+nav button {
+  color: #ffffff;
+  font-weight: 800;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+nav a:hover,
+nav button:hover {
+  background: #493164;
+  color: var(--mr-purple-light);
+}
+
+/* HERO */
+
+.hero {
+  background:
+    radial-gradient(ellipse at 90% 10%, #62418b66, transparent 45%),
+    linear-gradient(135deg, #28173d, #171020 75%);
+  border: 1px solid #60447c;
+  border-radius: 26px;
+  box-shadow: 0 16px 40px #08050e70;
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.hero p {
+  color: #e2d9f0;
+}
+
+.tag {
+  background: #493164;
+  border: 1px solid #8e6bb5;
+  color: #e5d5ff;
+  font-weight: 900;
+  border-radius: 30px;
+}
+
+.hero-card,
+.stats > div {
+  background: #302047;
+  border: 1px solid #5a4073;
+  border-radius: 20px;
+  box-shadow: 0 10px 26px #08050e55;
+}
+
+.hero-card h2,
+.hero-card h3,
+.stats h2,
+.stats h3,
+.stats strong {
+  color: #ffffff;
+}
+
+.hero-card p,
+.stats p {
+  color: #e2d9f0;
+}
+
+.health-status {
+  background: #173e3b;
+  border: 1px solid #368f82;
+  color: #a8f5e5;
+  border-radius: 12px;
+}
+
+/* MAIN SECTIONS */
+
+.doctors,
+.hospitals,
+.appointment,
+.hospital-beds {
+  background: #20162d;
+  border: 1px solid var(--mr-border);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px #08050e45;
+}
+
+.doctors h1,
+.doctors h2,
+.doctors h3,
+.hospitals h1,
+.hospitals h2,
+.hospitals h3,
+.appointment h1,
+.appointment h2,
+.appointment h3,
+.hospital-beds h1,
+.hospital-beds h2,
+.hospital-beds h3 {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+/* DOCTOR AND HOSPITAL CARDS */
+
+.doctor-card,
+.hospital-card {
+  background: linear-gradient(145deg, #35234a, #261a36);
+  border: 1px solid #59406f;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px #08050e45;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.doctor-card:hover,
+.hospital-card:hover {
+  transform: translateY(-5px);
+  border-color: #9b6dff;
+  box-shadow: 0 12px 30px #9b6dff35;
+}
+
+.doctor-card h2,
+.doctor-card h3,
+.hospital-card h2,
+.hospital-card h3 {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.doctor-card p,
+.hospital-card p {
+  color: #e2d9f0;
+}
+
+.doctor-icon {
+  background: #493164;
+  color: #d9c2ff;
+  border-radius: 18px;
+}
+
+.hospital-icon {
+  background: #173e3b;
+  color: #67e8cf;
+  border-radius: 18px;
+}
+
+/* BUTTONS */
+
+button,
+.hospital-details-btn,
+.hospital-directions-btn {
+  font-weight: 900;
+  transition: all 0.2s ease;
+}
+
+.hospital-details-btn,
+.hospital-directions-btn {
+  background: #6844b7;
+  color: #ffffff;
+  border: 1px solid #9b6dff;
+  border-radius: 11px;
+}
+
+.hospital-details-btn:hover,
+.hospital-directions-btn:hover {
+  background: #9b6dff;
+  color: #ffffff;
+  box-shadow: 0 0 18px #9b6dff55;
+}
+
+/* SEARCH AND FORM FIELDS */
+
+.hospital-search,
+input,
+select,
+textarea {
+  background: #191222;
+  color: #ffffff;
+  border: 1px solid #604875;
+  border-radius: 11px;
+  font-weight: 700;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b8a9c9;
+}
+
+.hospital-search:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #9b6dff;
+  box-shadow: 0 0 0 3px #9b6dff30;
+}
+
+option {
+  background: #241831;
+  color: #ffffff;
+}
+
+/* HOSPITAL DETAILS AND BEDS */
+
+.hospital-detail-panel {
+  background: #2a1c3b;
+  border: 1px solid #604875;
+  border-radius: 18px;
+}
+
+.hospital-detail-header h2,
+.hospital-detail-header h3 {
+  color: #ffffff;
+}
+
+.bed-demo-note {
+  background: #173e3b;
+  border: 1px solid #368f82;
+  color: #a8f5e5;
+  border-radius: 12px;
+}
+
+.verification-note {
+  background: #49351e;
+  border: 1px solid #956b35;
+  color: #ffe0a3;
+  border-radius: 12px;
+}
+
+/* LOGIN MENU */
+
+.login-panel {
+  background: #241831;
+  border: 1px solid #604875;
+  border-radius: 16px;
+  box-shadow: 0 14px 35px #08050e80;
+}
+
+.login-panel h2,
+.login-panel h3 {
+  color: #ffffff;
+}
+
+.login-panel a,
+.login-panel button {
+  background: #35234a;
+  color: #e5d5ff;
+  border-radius: 10px;
+}
+
+.login-panel a:hover,
+.login-panel button:hover {
+  background: #6844b7;
+  color: #ffffff;
+}
+
+/* EMERGENCY SECTION */
+
+.emergency-section {
+  background: linear-gradient(145deg, #481b2b, #2c1424);
+  border: 1px solid #a73a55;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px #d6385820;
+}
+
+.emergency-section h1,
+.emergency-section h2,
+.emergency-section h3 {
+  color: #ffb2c0;
+  font-weight: 900;
+}
+
+.emergency-section p {
+  color: #ffe0e6;
+}
+
+.emergency-call-btn {
+  background: #d63858;
+  color: #ffffff;
+  border: 1px solid #ff7993;
+  border-radius: 11px;
+  font-weight: 900;
+}
+
+.emergency-call-btn:hover {
+  background: #f04b6b;
+  box-shadow: 0 0 18px #d6385855;
+}
+
+.emergency-location-btn {
+  background: #35234a;
+  color: #ffffff;
+  border: 1px solid #8e6bb5;
+  border-radius: 11px;
+}
+
+.emergency-location-btn:hover {
+  background: #6844b7;
+  color: #ffffff;
+}
+
+.emergency-location-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* FOOTER */
+
+footer {
+  background: #100b18;
+  color: #ffffff;
+  border-top: 1px solid #49345e;
+}
+
+footer h2,
+footer h3,
+footer p,
+footer a,
+footer strong {
+  color: #ffffff;
+}
+
+footer a:hover {
+  color: #c4a5ff;
+}
+
+/* ACCESSIBILITY */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #c4a5ff;
+  outline-offset: 3px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .doctors,
+  .hospitals,
+  .appointment,
+  .hospital-beds,
+  .emergency-section {
+    border-radius: 17px;
+  }
+}
+/* MediRoutes: readable text and form improvements */
+
+body {
+  color: #F8FAFC;
+}
+
+h1, h2, h3, h4,
+p, label, li,
+.doctor-card,
+.hospital-card,
+.appointment {
+  color: #F1F5F9;
+}
+
+h1, h2, h3 {
+  color: #FFFFFF;
+}
+
+.tag,
+.verification-note,
+.hospital-details-link,
+.hospital-beds,
+.bed-demo-note {
+  color: #BFDBFE;
+}
+
+.hospital-card strong,
+.doctor-card strong,
+.appointment strong {
+  color: #FFFFFF;
+}
+
+.hospital-card,
+.doctor-card,
+.appointment,
+.hero-card {
+  border-color: #475569;
+}
+
+input,
+select,
+textarea {
+  color: #F8FAFC;
+  background: #172033;
+  border: 1px solid #64748B;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #CBD5E1;
+  opacity: 1;
+}
+
+button {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-panel input {
+  margin: 5px 0;
+  max-width: 100%;
+}
+
+.login-panel button {
+  margin: 5px 4px 5px 0;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 2px;
+}
+/* =====================================
+   MediRoutes - Light Lavender Theme
+   CSS override only; keep existing classes
+===================================== */
+
+:root {
+  color-scheme: light;
+  --lavender-bg: #F8F6FF;
+  --lavender-soft: #EEE8FF;
+  --lavender-border: #D8CCF5;
+  --purple: #6D28D9;
+  --purple-hover: #5B21B6;
+  --purple-light: #8B5CF6;
+  --text-dark: #211634;
+  --text-muted: #514563;
+  --white: #FFFFFF;
+  --success: #166534;
+  --success-bg: #DCFCE7;
+  --danger: #B91C1C;
+  --danger-bg: #FEE2E2;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  background: var(--lavender-bg);
+  color: var(--text-dark);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  font-weight: 750;
+}
+
+p, label, li, small, strong, span {
+  color: inherit;
+}
+
+/* Navbar */
+.navbar,
+nav {
+  background: var(--white);
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--lavender-border);
+  box-shadow: 0 3px 14px rgba(55, 32, 95, 0.07);
+}
+
+.navbar a,
+nav a {
+  color: var(--text-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+nav a:hover {
+  color: var(--purple);
+}
+
+/* Main sections */
+.hero,
+.appointment,
+.hospitals,
+.doctors,
+.emergency-section {
+  color: var(--text-dark);
+}
+
+.hero {
+  background: linear-gradient(135deg, #F1EBFF, #FFFFFF);
+  border: 1px solid var(--lavender-border);
+  border-radius: 24px;
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  color: var(--text-dark);
+}
+
+.tag {
+  display: inline-block;
+  background: var(--lavender-soft);
+  color: #4C1D95;
+  border: 1px solid var(--lavender-border);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-weight: 700;
+}
+
+.hero-card,
+.health-status,
+.stats,
+.doctor-card,
+.hospital-card,
+.hospital-detail-panel,
+.login-panel,
+.verification-note,
+.hospital-beds {
+  background: var(--white);
+  color: var(--text-dark);
+  border: 1px solid var(--lavender-border);
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(55, 32, 95, 0.06);
+}
+
+/* Cards and headings */
+.doctor-card h2,
+.doctor-card h3,
+.hospital-card h2,
+.hospital-card h3,
+.hospital-detail-panel h2,
+.hospital-detail-panel h3 {
+  color: #3B176F;
+}
+
+.doctor-card p,
+.hospital-card p,
+.hospital-card li,
+.appointment p {
+  color: var(--text-muted);
+}
+
+.doctor-icon,
+.hospital-icon {
+  background: var(--lavender-soft);
+  color: var(--purple);
+  border-radius: 14px;
+}
+
+.hospital-card strong,
+.doctor-card strong {
+  color: var(--text-dark);
+}
+
+/* Buttons */
+button,
+.hospital-details-btn,
+.hospital-directions-btn,
+.emergency-call-btn,
+.emergency-location-btn {
+  background: var(--purple);
+  color: var(--white);
+  border: 1px solid var(--purple);
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+.hospital-details-btn:hover,
+.hospital-directions-btn:hover {
+  background: var(--purple-hover);
+  color: var(--white);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.hospital-details-link,
+a {
+  color: var(--purple);
+}
+
+.hospital-details-link {
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--purple-hover);
+}
+
+/* Forms and login */
+input,
+select,
+textarea {
+  width: auto;
+  max-width: 100%;
+  background: var(--white);
+  color: var(--text-dark);
+  border: 1px solid #B8A5E5;
+  border-radius: 9px;
+  padding: 10px 12px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #71647F;
+  opacity: 1;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #A78BFA;
+  outline-offset: 1px;
+  border-color: var(--purple);
+}
+
+.login-panel label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.login-panel input {
+  margin: 5px 0 12px;
+}
+
+/* Hospital information */
+.hospital-details-link,
+.hospital-beds,
+.bed-demo-note,
+.verification-note {
+  color: var(--text-muted);
+}
+
+.hospital-beds {
+  background: #F7F3FF;
+}
+
+.bed-demo-note {
+  background: #F0FDF4;
+  border: 1px solid #BBF7D0;
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--success);
+}
+
+.hospital-search {
+  background: var(--white);
+  color: var(--text-dark);
+  border: 1px solid var(--lavender-border);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.no-hospitals {
+  color: var(--text-muted);
+  background: var(--white);
+  border: 1px dashed var(--lavender-border);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+/* Emergency section */
+.emergency-section {
+  background: #FFF1F2;
+  border: 1px solid #FECDD3;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.emergency-section h2,
+.emergency-section h3,
+.emergency-section p {
+  color: #881337;
+}
+
+.emergency-section .emergency-call-btn {
+  background: #B91C1C;
+  border-color: #B91C1C;
+  color: #FFFFFF;
+}
+
+.emergency-section .emergency-location-btn {
+  background: var(--purple);
+  color: #FFFFFF;
+}
+
+/* Status indicators */
+.health-status {
+  background: #F0FDF4;
+  border-color: #BBF7D0;
+}
+
+footer {
+  background: #EEE8FF;
+  color: var(--text-dark);
+  border-top: 1px solid var(--lavender-border);
+  padding: 20px;
+}
+
+footer p,
+footer a {
+  color: var(--text-dark);
+}
+
+/* Keyboard accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #A78BFA;
+  outline-offset: 3px;
+}
+
+/* Responsive layout */
+@media (max-width: 850px) {
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .doctor-grid,
+  .hospital-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .login-panel input,
+  .hospital-search {
+    max-width: 100%;
+  }
+}
+/* Fix only text visibility in MediRoutes */
+
+.hospital-card p,
+.hospital-card span,
+.hospital-card strong,
+.hospital-card label,
+.hospital-card li,
+.hospital-card .phone,
+.hospital-card .available-services,
+.hospital-card .hospital-beds,
+.hospital-details-link,
+.appointment p,
+.appointment span,
+.appointment strong,
+.appointment label,
+.login-panel label,
+.login-panel p {
+  color: #F8FAFC !important;
+}
+
+/* Make phone labels readable */
+.hospital-card p,
+.hospital-card label {
+  color: #E2E8F0 !important;
+}
+
+/* Keep headings clear */
+.hospital-card h2,
+.hospital-card h3,
+.appointment h2,
+.appointment h3 {
+  color: #FFFFFF !important;
+}
+
+/* Keep form fields readable */
+.login-panel input,
+.login-panel select,
+.login-panel textarea {
+  color: #241B35 !important;
+  background: #FFFFFF !important;
+}
+
+.login-panel input::placeholder,
+.login-panel textarea::placeholder {
+  color: #514761 !important;
+  opacity: 1;
+}
+/* FIX: Hospital section text visibility */
+
+.hospitals {
+  background: #F8F7FC !important;
+  color: #241B35 !important;
+  opacity: 1 !important;
+}
+
+.hospitals h1,
+.hospitals h2,
+.hospitals h3,
+.hospitals p {
+  color: #241B35 !important;
+  opacity: 1 !important;
+}
+
+.hospital-grid .hospital-card {
+  background: #FFFFFF !important;
+  color: #241B35 !important;
+  opacity: 1 !important;
+  border: 1px solid #D8CCF5 !important;
+}
+
+/* Fix faded address, phone number and service text */
+.hospital-card,
+.hospital-card * {
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+.hospital-card p,
+.hospital-card span,
+.hospital-card div,
+.hospital-card li,
+.hospital-card label,
+.hospital-card strong {
+  color: #302342 !important;
+}
+
+/* Keep purple buttons and white button text */
+.hospital-card button,
+.hospital-card .hospital-details-btn,
+.hospital-card .hospital-directions-btn {
+  background: #6038B5 !important;
+  color: #FFFFFF !important;
+  border-color: #6038B5 !important;
+}
+
+.hospital-card button *,
+.hospital-card .hospital-details-btn *,
+.hospital-card .hospital-directions-btn * {
+  color: #FFFFFF !important;
+}
+
+.hospital-card a,
+.hospital-card .hospital-details-link {
+  color: #5429A5 !important;
+  font-weight: 700 !important;
+}
+
+/* Demo availability notice */
+.hospital-card .bed-demo-note {
+  background: #F0FDF4 !important;
+  color: #166534 !important;
+  border: 1px solid #86D5A0 !important;
+}
+
+.hospital-card .bed-demo-note * {
+  color: #166534 !important;
+}
+
+/* Bed category panel */
+.hospital-card .hospital-beds {
+  background: #F5F0FF !important;
+  color: #302342 !important;
+  border-color: #D8CCF5 !important;
+}
+
+.hospital-card .hospital-beds * {
+  color: #302342 !important;
+}
+/* MediRoutes: fix unreadable dark sections */
+
+:root {
+  --mr-bg: #F8F7FC;
+  --mr-card: #FFFFFF;
+  --mr-text: #241B35;
+  --mr-muted: #514761;
+  --mr-purple: #6038B5;
+}
+
+/* Main content sections */
+.hero,
+.doctors,
+.hospitals,
+.appointment,
+.emergency-section,
+section {
+  color: var(--mr-text);
+}
+
+/* Dark sections visible in your screenshots */
+.hero,
+.hero-card,
+.doctors,
+.hospitals,
+.appointment,
+.hospital-grid,
+.doctor-grid,
+.emergency-section {
+  background-color: var(--mr-bg) !important;
+}
+
+/* Doctor and hospital cards */
+.doctor-card,
+.hospital-card,
+.hospital-detail-panel,
+.hospital-beds,
+.stats,
+.health-status {
+  background-color: var(--mr-card) !important;
+  color: var(--mr-text) !important;
+  border-color: #D8CCF5 !important;
+}
+
+/* Make text readable on light backgrounds */
+.hero h1,
+.hero h2,
+.hero h3,
+.hero p,
+.doctors h1,
+.doctors h2,
+.doctors h3,
+.doctors p,
+.hospitals h1,
+.hospitals h2,
+.hospitals h3,
+.hospitals p,
+.appointment h1,
+.appointment h2,
+.appointment h3,
+.appointment p,
+.hospital-card p,
+.hospital-card li,
+.hospital-card span,
+.hospital-card label,
+.hospital-card strong {
+  color: var(--mr-text) !important;
+  opacity: 1 !important;
+}
+
+/* Bed availability notice */
+.hospital-card .bed-demo-note {
+  background-color: #F0FDF4 !important;
+  color: #166534 !important;
+}
+
+/* Login dropdown */
+.login-panel {
+  background-color: #FFFFFF !important;
+  color: var(--mr-text) !important;
+  border: 1px solid #D8CCF5 !important;
+}
+
+.login-panel h2,
+.login-panel h3,
+.login-panel p,
+.login-panel label {
+  color: var(--mr-text) !important;
+}
+
+/* Keep buttons purple with white text */
+button,
+.hospital-details-btn,
+.hospital-directions-btn {
+  background-color: var(--mr-purple);
+  color: #FFFFFF;
+}
+
+/* Keep input text dark and readable */
+input,
+select,
+textarea {
+  background-color: #FFFFFF !important;
+  color: var(--mr-text) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #665B76 !important;
+  opacity: 1 !important;
+}
+
+/* Footer */
+footer {
+  background-color: #EEE8FA !important;
+  color: var(--mr-text) !important;
+}
+
+footer p,
+footer span,
+footer li {
+  color: var(--mr-muted) !important;
+}
+/* Fix MediRoutes footer branding visibility */
+
+footer {
+  background: #EEE8FA !important;
+  color: #241B35 !important;
+  opacity: 1 !important;
+}
+
+footer h1,
+footer h2,
+footer h3,
+footer p,
+footer span,
+footer a,
+footer strong,
+footer div {
+  color: #241B35 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+footer a,
+footer strong {
+  font-weight: 800 !important;
+}
+
+/* MediRoutes brand text */
+footer .brand,
+footer .logo,
+footer .footer-brand {
+  color: #6038B5 !important;
+  font-weight: 800 !important;
+}
+
+/* Keep the footer tagline readable */
+footer p {
+  color: #514761 !important;
+}
+/* Doctor Dashboard visibility fix */
+button {
+  opacity: 1 !important;
+  color: #ffffff;
+}
+
+button:disabled {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  background-color: #d8d0e8 !important;
+  cursor: not-allowed;
+}
+
+input,
+select,
+textarea {
+  color: #252039 !important;
+  background-color: #ffffff !important;
+}
+
+input::placeholder {
+  color: #777184 !important;
+  opacity: 1 !important;
+}
+.auth-toggle button {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  background-color: #5145cd !important;
+  border: 1px solid #5145cd !important;
+}
+
+.auth-toggle button:disabled {
+  opacity: 1 !important;
+  color: #ffffff !important;
+  background-color: #5145cd !important;
+  cursor: default;
+}
